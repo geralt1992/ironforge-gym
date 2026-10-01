@@ -1,0 +1,3 @@
+/* Styles for the static subpages (privacy policy, 404) — they ship without JavaScript. */
+@import './theme.css';
+@import './styles.css';

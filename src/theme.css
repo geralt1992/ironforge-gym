@@ -1,0 +1,58 @@
+/* ==========================================================================
+   TEMA — boje i fontovi. Za novog klijenta mijenjaš ovu datoteku
+   i src/content.ts (sadržaj).
+   ========================================================================== */
+
+/* --- Fontovi -------------------------------------------------------------
+   Poslužuju se lokalno (@fontsource), samo podskupovi latin + latin-ext
+   (latin-ext pokriva č, ć, đ, š, ž). Za drugi font: npm i @fontsource/<font>,
+   pa zamijeni importe i varijable --font-* ispod. */
+@import '@fontsource/bebas-neue/latin-400.css';
+@import '@fontsource/bebas-neue/latin-ext-400.css';
+
+/* Inter (varijabilni font, sve debljine u jednoj datoteci) */
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('@fontsource-variable/inter/files/inter-latin-ext-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  /* --- Boje ------------------------------------------------------------ */
+  --gold: #c9a84c; /* glavna (naglasak) boja */
+  --gold-rgb: 201, 168, 76; /* ista boja u RGB obliku — za prozirne nijanse */
+  --gold-light: #e6c96a; /* hover naglaska */
+
+  --dark: #080808; /* pozadina stranice */
+  --dark-rgb: 8, 8, 8;
+  --dark2: #111111; /* pozadina izmjeničnih sekcija */
+  --dark3: #1a1a1a; /* kartice, polja obrasca */
+  --gray: #2a2a2a; /* rubovi i crte */
+  --featured-tint: #1a1500; /* nijansa istaknutog paketa */
+
+  --text: #e8e8e8; /* osnovni tekst */
+  --text-rgb: 232, 232, 232;
+  --muted: #888; /* sporedni tekst */
+  --heading: #fff; /* naslovi */
+  --on-accent: #000; /* tekst na zlatnoj pozadini */
+  --placeholder: #444; /* placeholder u poljima obrasca */
+  --danger: #ef8a80; /* poruka o grešci */
+
+  /* --- Fontovi --------------------------------------------------------- */
+  --font-display: 'Bebas Neue', 'Arial Narrow', sans-serif; /* naslovi */
+  --font-body: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; /* tekst */
+}
